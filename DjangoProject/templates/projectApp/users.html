@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>USERS</title>
+  </head>
+  <body>
+    <h1>Here are some users of this Application:-</h1>
+    {% if users %}
+    <ol>
+      {%for person in users%}
+      <li>User Info</li>
+      <ul>
+        <li>First Name :{{person.firstname}}</li>
+        <li>Last Name:-{{person.lastname}}</li>
+        <li>email:-{{person.email}}</li>
+      </ul>
+      {% endfor %}
+    </ol>
+    {% endif %}
+  </body>
+</html>
